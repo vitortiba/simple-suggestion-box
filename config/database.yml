@@ -25,4 +25,7 @@ test:
 
 production:
   <<: *default
-  database: 'suggestion_box'
+  host: us-cdbr-iron-east-02.cleardb.net
+  database: heroku_dfcf267d831b0dc
+  username: bcd112a334e729
+  password: 13b474b5
