@@ -14,7 +14,7 @@ development:
   database: 'suggestion_box'
   host: localhost
   username: root
-  password: root
+  password: admin
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,7 +25,7 @@ test:
 
 production:
   <<: *default
-  host: us-cdbr-iron-east-02.cleardb.net
-  database: heroku_dfcf267d831b0dc
-  username: bcd112a334e729
-  password: 13b474b5
+  host: <%= ENV['CLEARDB_HOST'] %>
+  database: <%= ENV['CLEARDB_DATABASE_NAME'] %>
+  username: <%= ENV['CLEARDB_USERNAME'] %>
+  password: <%= ENV['CLEARDB_PASSWORD'] %>
