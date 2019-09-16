@@ -1,5 +1,5 @@
 module SuggestionsHelper
-	PERMITTED_DAYS = [13, 14, 15]
+	PERMITTED_DAYS = [11, 12, 13]
 
 	def can_show_all_suggestions?(date)
 		 PERMITTED_DAYS.include?(date.day.to_i)
