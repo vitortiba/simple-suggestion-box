@@ -23,5 +23,7 @@
         </tr>
       <% end %>
     </table>
+  <% else %>
+    <p>Abre apenas nos dias: <%= PERMITTED_DAYS.join(',') %></p>
   <% end %>
 </div>
