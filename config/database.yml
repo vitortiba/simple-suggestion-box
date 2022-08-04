@@ -14,7 +14,7 @@ development:
   database: 'suggestion_box'
   host: mysql
   username: root
-  password: root
+  password: test
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
