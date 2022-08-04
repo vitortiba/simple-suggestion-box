@@ -2,9 +2,7 @@ tasks:
   - init: |
       docker-compose build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g)
       docker-compose up -d
-  - name: Bash
-    init: gp sync-await bundle # wait for the above 'init' to finish
-    command: docker exec -ti simple-suggestion-box_web_1 bash
+  - command: docker exec -ti simple-suggestion-box_web_1 bash
 
 ports:
   - port: 3000
