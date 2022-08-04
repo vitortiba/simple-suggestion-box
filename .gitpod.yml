@@ -1,11 +1,11 @@
 tasks:
   - init: |
       docker-compose build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g)
-  - command: docker-compose up -d
+      docker-compose up -d
   
   - name: Open Bash
     command: |
-      gp ports await 3000
+      gp await-port 3000
       docker exec -ti simple-suggestion-box_web_1 bash
 
 
